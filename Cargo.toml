@@ -1,0 +1,18 @@
+[package]
+name = "pattern-matching"
+version = "0.1.0"
+authors = ["Alexander Korn <dev@lxnd.me>"]
+edition = "2018"
+description = """
+Pattern matching and full-text index algorithms.
+"""
+documentation = "https://docs.rs/pattern-matching"
+readme = "README.md"
+repository = "https://github.com/lxndio/rust-pattern-matching"
+license = "GPL-3.0"
+keywords = ["pattern", "match", "matching", "full-text", "index"]
+categories = ["algorithms", "compression", "data-structures"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
