@@ -9,7 +9,7 @@ Pattern matching and full-text index algorithms.
 documentation = "https://docs.rs/pattern-matching"
 readme = "README.md"
 repository = "https://github.com/lxndio/rust-pattern-matching"
-license = "GPL-3.0"
+license = "MIT"
 keywords = ["pattern", "match", "matching", "full-text", "index"]
 categories = ["algorithms", "compression", "data-structures"]
 
