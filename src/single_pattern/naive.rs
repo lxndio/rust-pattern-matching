@@ -15,6 +15,17 @@
 /// in the given text. If you want to find all occurrences, consider using
 /// [`naive_all`](naive_all) instead.
 ///
+/// # Runtime
+///
+/// The worst case runtime is `O(n * m)`, with `n` being the length of the text
+/// (perhaps starting at `i0`) and `m` being the length of the pattern.
+///
+/// # When to Use It
+///
+/// Probably never. This algorithm is the most simple approach to matching a
+/// pattern on a text. Could be useful for comparing runtimes or correctness
+/// with other algorithms.
+///
 /// # How It Works
 ///
 /// The algorithm iterates over each index `i` of the text's characters starting
@@ -40,9 +51,15 @@ pub fn naive(pattern: &[u8], text: &[u8], i0: usize) -> Option<usize> {
 ///
 /// Takes a `pattern`, and text `text`.
 ///
-/// If the given text contains the given pattern, the algorithm returns all
-/// indexes of the first letters of the found occurrences.
+/// If the given text contains the given pattern, the algorithm returns the
+/// indexes of the first letters of all found occurrences.
 /// If the pattern could not be found in the text, an empty vector is returned.
+///
+/// # When to Use It
+///
+/// Probably never. This algorithm is the most simple approach to matching a
+/// pattern on a text. Could be useful for comparing runtimes or correctness
+/// with other algorithms.
 ///
 /// # How It Works
 ///

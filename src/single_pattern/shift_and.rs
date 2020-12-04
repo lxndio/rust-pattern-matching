@@ -2,7 +2,7 @@
 //
 // Licensed under the MIT license
 
-pub fn shift_and_single_masks(pattern: &[u8]) -> (Vec<usize>, usize, usize) {
+pub(crate) fn shift_and_single_masks(pattern: &[u8]) -> (Vec<usize>, usize, usize) {
     let mut masks = vec![0; 256];
     let mut bit = 1;
 
@@ -36,6 +36,27 @@ fn shift_and_with_masks(
     res
 }
 
+/// An implementation of the Shift-And algorithm.
+///
+/// Takes a `pattern`, and text `text`.
+///
+/// If the given text contains the given pattern, the algorithm returns the
+/// indexes of the first letters of all found occurrences.
+/// If the pattern could not be found in the text, an empty vector is returned.
+///
+/// # Runtime
+///
+/// The worst case runtime is `O(n * m)`, with `n` being the length of the text
+/// and `m` being the length of the pattern.
+///
+/// # When to Use It
+///
+/// The algorithm can be useful if you want to match short patterns.
+///
+/// # How It Works
+///
+/// The algorithm works by simulating a nondeterministic finite automaton (NFA)
+/// in memory using cheap bit operations.
 pub fn shift_and(pattern: &[u8], text: &[u8]) -> Vec<usize> {
     let mut res = Vec::new();
     let m = pattern.len();

@@ -4,5 +4,7 @@
 
 //! Algorithms matching a single pattern on a text.
 
+pub mod bndm;
+pub mod horspool;
 pub mod naive;
 pub mod shift_and;
